@@ -247,24 +247,7 @@ FROM (
 GROUP BY games
 ORDER BY games;
 
--- which country won the most gold, most silver, most bronze medals and the most medals in each olympic games.
-WITH medals_info AS (
-			SELECT
-				SUBSTRING_INDEX(games, ' - ', 1) AS games,
-				SUBSTRING_INDEX(games, ' - ', -1) AS country,
-				COALESCE(SUM(CASE WHEN medal="Gold" THEN 1 ELSE 0 END),0) AS Gold,
-				COALESCE(SUM(CASE WHEN medal="Silver" THEN 1 ELSE 0 END),0) AS Silver,
-				COALESCE(SUM(CASE WHEN medal="Bronze" THEN 1 ELSE 0 END),0) AS Bronze
-			FROM olympics.athlete_events athe
-			JOIN noc_regions reg
-			ON athe.noc=reg.noc
-			WHERE Medal <> " "
-			GROUP BY games, country)
-SELECT games, 
 
-            
-            
-            
 
 
 
