@@ -1,4 +1,4 @@
-## SQL Query Explorer
+### SQL Query Explorer
 
-#### This repository is a collection of SQL queries ranging from basic to advanced, 
-#### designed to serve as a resource for learning, practicing, and mastering SQL.
+##### This repository is a collection of SQL queries and analysis focused on Olympic athelete event data. 
+##### The project showcases various SQL techniques ranging from basic to advanced queries.
